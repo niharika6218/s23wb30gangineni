@@ -2,3 +2,9 @@ extends layout
 
 block content
   h1= title
+  - var results = [{universityname:"VIT", departmentname: "computerscience", score:83}, {universityname:"SRM", departmentname: "electronics", score:85},{universityname:"KLU", departmentname: "Mechanicalss", score:90}]
+  div(class="container-fluid") 
+  div(class="row")
+  -
+  each item,index in results
+    div(class="col-sm-2 ") #{item.universityname} - #{item.departmentname} - #{item.score}
